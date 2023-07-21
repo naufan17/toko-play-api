@@ -3,6 +3,7 @@ HTTP Rest API backend with Node js and Express js. Mid Term Project Gigih Genera
 
 How to setup local:
 - Clone this repository
+- Rename .envExample to .env and fill in the section that must be filled, for example: (soon)
 - Run this command to instal dependencies:
 ```
 npm install
@@ -11,7 +12,6 @@ npm install
 ```
 npm dev
 ```
-- Rename .envExample to .env and fill in the section that must be filled, for example: (soon)
 
 # Structure Folder (soon)
 
