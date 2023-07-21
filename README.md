@@ -11,6 +11,7 @@ npm install
 ```
 npm dev
 ```
+- Rename .envExample to .env and fill in the section that must be filled, for example: (soon)
 
 # Structure Folder (soon)
 
