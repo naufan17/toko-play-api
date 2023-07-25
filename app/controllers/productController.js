@@ -1,6 +1,5 @@
 const Product = require('../models/Product');
   
-
 // Get all product based video
 async function getAllProducts(req, res){
     const { videoId } = req.params;
@@ -9,7 +8,7 @@ async function getAllProducts(req, res){
         const products = await Product.find({ video_id: videoId });
         res.status(200).json(products);
     } catch (err) {
-        console.error('Error fetching videos:', err);
+        console.error('Error fetching product:', err);
         res.status(500).json({ error: 'Internal server error' });
     }
 }

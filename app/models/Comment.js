@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 
 const commentSchema = new mongoose.Schema({
-    comment_id: { 
-        required: true,
-        type: String
-    },
     video_id: { 
         required: true,
         type: String
@@ -18,8 +14,8 @@ const commentSchema = new mongoose.Schema({
         type: String
     },
     created_at: {  
-        required: true,
-        type: Date
+        type: Date,
+        default: Date.now
     }
 });
 

@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 
 const videoSchema = new mongoose.Schema({
-    video_id: { 
-        required: true,
-        type: String
-    },
     url_video: { 
         required: true,
         type: String
@@ -18,8 +14,8 @@ const videoSchema = new mongoose.Schema({
         type: String
     },
     views: { 
-        required: true,
-        type: Number
+        type: Number,
+        default: 0
     }
 });
 
