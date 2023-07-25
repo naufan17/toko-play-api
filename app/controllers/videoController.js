@@ -10,7 +10,7 @@ async function getAllVideo(req, res) {
             if(!videos) {
                 return res.status(404).json({ error: 'Videos not found' })
             } else {
-                res.status(200).json(videos);
+                res.status(200).json({ videos: videos });
             }
         } catch (err) {
             console.error('Error fetching videos:', err);
@@ -19,7 +19,7 @@ async function getAllVideo(req, res) {
     } else {
         try {
             const videos = await Video.find();
-            res.status(200).json(videos);
+            res.status(200).json({ videos: videos });
         } catch (err) {
             console.error('Error fetching videos:', err);
             res.status(500).json({ error: 'Internal server error' });
@@ -31,12 +31,12 @@ async function getOneVideo(req, res){
     const { videoId } = req.params;
 
     try {
-        const videos = await Video.findById(videoId);
+        const video = await Video.findById(videoId);
         
-        if(!videos) {
+        if(!video) {
             return res.status(404).json({ error: 'Videos not found' })
         } else {
-            res.status(200).json(videos);
+            res.status(200).json(video);
         }
     } catch (err) {
         console.error('Error fetching videos:', err);

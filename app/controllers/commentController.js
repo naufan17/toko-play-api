@@ -4,12 +4,12 @@ async function getAllComment(req, res){
     const { videoId } = req.params;
 
     try {
-        const comments = await Comment.find({ video_id: videoId });
+        const comments = await Comment.find({ video_id: videoId }, '_id username comment created_at');
 
         if(!comments) {
             res.status(404).json({ error: 'Comment not found' });
         } else {
-            res.status(200).json(comments);
+            res.status(200).json({ comments: comments });
         }
     } catch (err) {
         console.error('Error fetching comment:', err);
