@@ -1,0 +1,96 @@
+[{
+    "video_id": "64c0027879fa15b5b29bd2b1",
+    "image": "https://images.unsplash.com/photo-1611427579146-5a418d32f0ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80",
+    "name": "TV Sony BRAVIA 65X95L",
+    "price": "6.000.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b1",
+    "image": "https://images.unsplash.com/photo-1615210230840-69c07c13b4d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+    "name": "TV TCL 55A50",
+    "price": "5.000.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b2",
+    "image": "https://images.unsplash.com/photo-1611427579146-5a418d32f0ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80",
+    "name": "TV Sony BRAVIA 65X95L",
+    "price": "6.000.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b2",
+    "image": "https://images.unsplash.com/photo-1615210230840-69c07c13b4d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+    "name": "TV TCL 55A50",
+    "price": "5.000.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b3",
+    "image": "https://images.unsplash.com/photo-1683507557764-ee6625d7ec0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1031&q=80",
+    "name": "HP Redmi Note 12",
+    "price": "3.400.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b3",
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80",
+    "name": "HP Samsung A54",
+    "price": "6.500.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b4",
+    "image": "https://images.unsplash.com/photo-1683507557764-ee6625d7ec0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1031&q=80",
+    "name": "HP Redmi Note 12",
+    "price": "3.400.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b4",
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80",
+    "name": "HP Samsung A54",
+    "price": "6.500.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b5",
+    "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=465&q=80",
+    "name": "Samsung Galaxy S23 Ultra",
+    "price": "15.000.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b5",
+    "image": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=367&q=80",
+    "name": "Sony Experia 1 Mark V",
+    "price": "14.500.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b6",
+    "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=465&q=80",
+    "name": "Samsung Galaxy S23 Ultra",
+    "price": "15.000.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b6",
+    "image": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=367&q=80",
+    "name": "Sony Experia 1 Mark V",
+    "price": "14.500.000"
+},
+{
+    "video_id" : "64c0027879fa15b5b29bd2b7",
+    "image" : "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=820&q=80",
+    "name" : "Laptop MSI Cyborg Gaming RTX 4080",
+    "price" : "26.000.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b7",
+    "image": "https://images.unsplash.com/photo-1623126908029-58cb08a2b272?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+    "name": "Tablet OPPO Pad Air",
+    "price": "3.200.000"
+},
+{
+    "video_id" : "64c0027879fa15b5b29bd2b8",
+    "image" : "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=820&q=80",
+    "name" : "Laptop MSI Cyborg Gaming RTX 4080",
+    "price" : "26.000.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b8",
+    "image": "https://images.unsplash.com/photo-1623126908029-58cb08a2b272?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+    "name": "Tablet OPPO Pad Air",
+    "price": "3.200.000"
+}] 

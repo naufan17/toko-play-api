@@ -1,7 +1,6 @@
 const Video = require('../models/Video');
 
-// Get all videos
-async function getAllVideos(req, res) {
+async function getAllVideo(req, res) {
     const reqTitle  = req.query.title;
 
     if(reqTitle && reqTitle.trim() !== '') {
@@ -28,8 +27,7 @@ async function getAllVideos(req, res) {
     }
 }
   
-// Get videos by id
-async function getOneVideos(req, res){
+async function getOneVideo(req, res){
     const { videoId } = req.params;
 
     try {
@@ -46,7 +44,7 @@ async function getOneVideos(req, res){
     }
 }
 
-async function playVideos(req, res){
+async function playVideo(req, res){
     const { videoId } = req.params;
 
     try {
@@ -69,4 +67,4 @@ async function playVideos(req, res){
 async function createVideo(req, res){}
 async function deleteVideo(req, res){}
 
-module.exports = { getAllVideos, getOneVideos, playVideos, createVideo, deleteVideo };
+module.exports = { getAllVideo, getOneVideo, playVideo, createVideo, deleteVideo };

@@ -1,7 +1,6 @@
 const Product = require('../models/Product');
   
-// Get all product based video
-async function getAllProducts(req, res){
+async function getAllProduct(req, res){
     const { videoId } = req.params;
 
     try {
@@ -23,4 +22,4 @@ async function createProduct(req, res){}
 async function deleteProduct(req, res){}
 
 
-module.exports = { getAllProducts, createProduct, deleteProduct }
+module.exports = { getAllProduct, createProduct, deleteProduct }

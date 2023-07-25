@@ -1,6 +1,5 @@
 const Comment = require('../models/Comment');
 
-// Get all comments
 async function getAllComment(req, res){
     const { videoId } = req.params;
 
@@ -18,7 +17,6 @@ async function getAllComment(req, res){
     }
 }
 
-// Create comment
 async function createComment(req, res){
     const reqComment = req.body;
     const comment = {

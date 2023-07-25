@@ -3,11 +3,11 @@ const productController = require('../controllers/productController');
 
 const router = express.Router();
 
-router.get('/products/:videoId', productController.getAllProducts)
+router.get('/products/:videoId', productController.getAllProduct)
 
 // Optional
 router.post('/products', productController.createProduct)
-router.delete('/products/:videoId', productController.createProduct)
+router.delete('/products/:videoId', productController.deleteProduct)
 
   
 module.exports = router;
