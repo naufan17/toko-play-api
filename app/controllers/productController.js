@@ -2,13 +2,15 @@ const Videos = require('../models/Video');
 const Products = require('../models/Product');
   
 // Get all products
-exports.getAllProducts = (req, res) => {
+async function getAllProducts(req, res){
 }
 
 // Get product based video
-exports.getVideoProducts = (req, res) => {
+async function getVideoProducts(req, res){
 }
 
 // Optional
-exports.getSearchProducts = (req, res) => {}
-exports.createProduct = (req, res) => {}
+async function getSearchProducts(req, res){}
+async function createProduct(req, res){}
+
+module.exports = { getAllProducts, getVideoProducts, getSearchProducts, createProduct }

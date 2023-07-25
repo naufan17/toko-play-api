@@ -1,9 +1,23 @@
+require('dotenv').config();
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const videoRoutes = require('./app/routes/videoRoutes');
 const productRoutes = require('./app/routes/productRoutes');
 const commmentRoutes = require('./app/routes/commentRoutes');
-require('dotenv').config();
+
+const mongoose = require('mongoose');
+const URL = 'mongodb://localhost:27017/toko-play';
+mongoose.connect(URL);
+const database = mongoose.connection;
+
+database.on('error', (err) => {
+    console.log(err);
+});
+
+database.once('connected', () => {
+  console.log('Connected to MongoDB');
+});
 
 const app = express();
 const port = process.env.PORT;

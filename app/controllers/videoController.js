@@ -1,17 +1,26 @@
 const Videos = require('../models/Video');
-  
-// Get all videos
-exports.getAllVideos = (req, res) => {
-}
 
+// Get all videos
+async function getAllVideos(req, res) {
+    try {
+        const videos = await Video.find();
+        res.status(200).json(videos);
+    } catch (err) {
+        console.error('Error fetching items:', err);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+}
+  
 // Get videos by id
-exports.getOneVideos = (req, res) => {
+async function getOneVideos(req, res){
 }
 
 // Get videos search by title
-exports.getSearchVideos = (req, res) => {
+async function getSearchVideos(req, res){
 }
 
 // Optional
-exports.createVideo = (req, res) => {}
-exports.deleteVideo = (req, res) => {}
+async function createVideo(req, res){}
+async function deleteVideo(req, res){}
+
+module.exports = { getAllVideos, getOneVideos, getSearchVideos, createVideo, deleteVideo  };
