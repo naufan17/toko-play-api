@@ -7,7 +7,12 @@ async function getAllVideos(req, res) {
     if(reqTitle && reqTitle.trim() !== '') {
         try {
             const videos = await Video.find({ title: { $regex: reqTitle, $options: 'i' } });
-            res.status(200).json(videos);
+            
+            if(!videos) {
+                return res.status(404).json({ error: 'Videos not found' })
+            } else {
+                res.status(200).json(videos);
+            }
         } catch (err) {
             console.error('Error fetching videos:', err);
             res.status(500).json({ error: 'Internal server error' });
@@ -29,7 +34,12 @@ async function getOneVideos(req, res){
 
     try {
         const videos = await Video.findById(videoId);
-        res.status(200).json(videos);
+        
+        if(!videos) {
+            return res.status(404).json({ error: 'Videos not found' })
+        } else {
+            res.status(200).json(videos);
+        }
     } catch (err) {
         console.error('Error fetching videos:', err);
         res.status(500).json({ error: 'Internal server error' });
@@ -47,7 +57,6 @@ async function playVideos(req, res){
         } else {
             video.views++;
             const updatedVideo = await video.save();
-
             res.status(200).json({ message: 'Video successfully to play' });
         }
     } catch (err) {

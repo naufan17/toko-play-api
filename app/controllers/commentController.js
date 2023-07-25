@@ -1,12 +1,17 @@
 const Comment = require('../models/Comment');
 
 // Get all comments
-async function getAllComments(req, res){
+async function getAllComment(req, res){
     const { videoId } = req.params;
 
     try {
         const comments = await Comment.find({ video_id: videoId });
-        res.status(200).json(comments);
+
+        if(!comments) {
+            res.status(404).json({ error: 'Comment not found' });
+        } else {
+            res.status(200).json(comments);
+        }
     } catch (err) {
         console.error('Error fetching comment:', err);
         res.status(500).json({ error: 'Internal server error' });
@@ -16,7 +21,6 @@ async function getAllComments(req, res){
 // Create comment
 async function createComment(req, res){
     const reqComment = req.body;
-
     const comment = {
         video_id: reqComment.video_id,
         username: reqComment.username,
@@ -37,4 +41,4 @@ async function createComment(req, res){
 async function deleteComment(req, res){
 }
 
-module.exports = { getAllComments, createComment, deleteComment}
+module.exports = { getAllComment, createComment, deleteComment}

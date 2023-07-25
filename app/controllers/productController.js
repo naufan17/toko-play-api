@@ -6,7 +6,12 @@ async function getAllProducts(req, res){
 
     try {
         const products = await Product.find({ video_id: videoId });
-        res.status(200).json(products);
+
+        if(!products){
+            res.status(404).json({ error: 'Product not found' });
+        } else {
+            res.status(200).json(products);
+        }
     } catch (err) {
         console.error('Error fetching product:', err);
         res.status(500).json({ error: 'Internal server error' });

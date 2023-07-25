@@ -3,11 +3,11 @@ const commentController = require('../controllers/commentController');
 
 const router = express.Router();
 
-router.get('/comments/:videoId', commentController.getAllComments)
-router.post('/comment', commentController.createComment)
+router.get('/comments/:videoId', commentController.getAllComment)
+router.post('/comments', commentController.createComment)
 
 // Optional
-router.delete('/comment/:commentId', commentController.deleteComment)
+router.delete('/comments/:commentId', commentController.deleteComment)
 
   
 module.exports = router;

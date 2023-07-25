@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const moment = require('moment');
 
 const commentSchema = new mongoose.Schema({
     video_id: { 
@@ -15,7 +16,7 @@ const commentSchema = new mongoose.Schema({
     },
     created_at: {  
         type: Date,
-        default: Date.now
+        default: moment().add(7, "hours")
     }
 });
 
