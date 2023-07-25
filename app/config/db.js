@@ -1,12 +1,13 @@
+require('dotenv').config();
+
 const mongoose = require('mongoose');
-const URL = 'mongodb://localhost:27017/toko-play';
+const URL = process.env.URL_DATABASE;
 
 mongoose.connect(URL);
+
 const database = mongoose.connection;
 
-database.on('error', console.error.bind(console, 'MongoDB connection error:'));
-database.once('open', () => {
-  console.log('Connected to MongoDB');
-});
+database.on('error', (err) => console.log(err));
+database.once('connected', () => console.log('Connected to MongoDB'));
 
 module.exports = { database };

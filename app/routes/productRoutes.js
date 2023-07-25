@@ -3,11 +3,11 @@ const productController = require('../controllers/productController');
 
 const router = express.Router();
 
-router.get('/products', productController.getAllProducts)
-router.get('/products/:video_id', productController.getVideoProducts)
+router.get('/products/:videoId', productController.getAllProducts)
 
 // Optional
-router.get('/products/search', productController.getSearchProducts)
 router.post('/product', productController.createProduct)
+router.delete('/product/:videoId', productController.createProduct)
+
   
 module.exports = router;

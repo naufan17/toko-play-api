@@ -4,12 +4,12 @@ const videoController = require('../controllers/videoController');
 const router = express.Router();
 
 router.get('/videos', videoController.getAllVideos)
-router.get('/videos/:video_id', videoController.getOneVideos)
-router.get('/videos/search', videoController.getSearchVideos)
+router.get('/videos/:videoId', videoController.getOneVideos)
 
 // Optional
+router.get('/videos/play/:videoId', videoController.playVideos)
 router.post('/video', videoController.createVideo)
-router.delete('/video/:id', videoController.deleteVideo)
+router.delete('/video/:videoId', videoController.deleteVideo)
 
   
 module.exports = router;
