@@ -28,6 +28,8 @@ db.createCollection('comments')
 ```
 - Import each collections with data json in folder database collection
 
+## API Structure 
+
 ## Structure Folder
 Below is structure for building REST API toko-play using Express JS:
 ```
@@ -73,7 +75,7 @@ Explanation of the folder structure:
 - package.json: The package.json file that lists your application's dependencies and scripts.
   
 ## Design Database
-Below is database design toko-play application using MongoDB:
+Below is collection database application in MongoDB:
 - Videos Collections
   ```
   {
@@ -104,6 +106,20 @@ Below is database design toko-play application using MongoDB:
     comment: String,
     created_at: Date
   }
+  ```
+Below is database design toko-play application using MongoDB:
+  ```
+   ______________________                 ____________________                 __________________
+  |        Products      |               |        Videos      |               |     Comments     |
+  |______________________|               |____________________|               |__________________|
+  | _id: ObjectId        |       |-------| _id: ObjectId      |-------|       | _id: ObjectId    |
+  | video_id: String     |-------|       | title: String      |       |-------| video_id: String |
+  | image: String        |               | url_video: String  |               | username: String |
+  | name: String         |               | thumbnail: String  |               | comment: String  |
+  | link_product: String |               | views: Number      |               | created_at: Date |
+  | price: String        |               |____________________|               |__________________|
+  |______________________|
+
   ```
 
 ## API Documentary and Usage
