@@ -29,6 +29,28 @@ db.createCollection('comments')
 - Import each collections with data json in folder database collection
 
 ## API Structure 
+Below is flow a request form client to the server and back
+```
+| Request |------>------| route |------>------| controller |------><------| models |------><------| database |
+                                                     |
+                                                     |
+                                         ------<----------->------
+                                         |                       |
+                                         |                       |
+                                    | success |              | errors |
+                                         |                       |
+                                         |                       |
+                                    | Response |            | Response |
+```
+Explanation of the structure API:
+- Request: The client (e.g., a web browser, mobile app, or another server) initiates a request to the server by sending an HTTP request. The request includes the HTTP method (e.g., GET, POST, PUT, DELETE), the endpoint URL, optional request parameters, headers, and sometimes a request body containing data (e.g., for POST or PUT requests).
+- Route: Upon receiving the request, the server's routing mechanism determines which endpoint or URL the request should be routed to. The routing system matches the requested URL with the appropriate route defined in the API.
+- Controller: Once the route is determined, the request is sent to the corresponding controller. The controller is responsible for handling the request and contains the business logic to process the incoming data, make decisions, and coordinate the actions to be taken.
+- Model: The controller interacts with the model layer to handle the data-related operations. The model represents the application's data and business rules. It may contain database queries, data validation, and other data manipulation logic.
+- Database: If the operation involves data retrieval or manipulation, the model interacts with the database to perform CRUD (Create, Read, Update, Delete) operations. The database stores and manages the persistent data of the application.
+- Model (again): Once the model retrieves or updates data from the database, it returns the data to the controller. The controller may further process the data as needed before proceeding.
+- Controller (again): After processing the data, the controller prepares the appropriate response to be sent back to the client. This may involve formatting the data, adding response headers, and setting the appropriate HTTP status code.
+- Response: The server sends the prepared response back to the client in the form of an HTTP response. The response contains the HTTP status code (indicating the success or failure of the request), response headers (metadata about the response), and the response body (usually in JSON format) containing the data requested by the client.
 
 ## Structure Folder
 Below is structure for building REST API toko-play using Express JS:
@@ -110,7 +132,7 @@ Below is collection database application in MongoDB:
 Below is database design toko-play application using MongoDB:
   ```
    ______________________                 ____________________                 __________________
-  |        Products      |               |        Videos      |               |     Comments     |
+  |       Products       |               |       Videos       |               |     Comments     |
   |______________________|               |____________________|               |__________________|
   | _id: ObjectId        |       |-------| _id: ObjectId      |-------|       | _id: ObjectId    |
   | video_id: String     |-------|       | title: String      |       |-------| video_id: String |
@@ -133,7 +155,7 @@ Below is database design toko-play application using MongoDB:
   curl -X GET /api/videos
   ```
 - Response:
-  - Success: (code 200)
+  - Success: (200)
     ```
     {
       "videos": [
@@ -147,7 +169,7 @@ Below is database design toko-play application using MongoDB:
       ]
     }
     ```
-  - Errors: (code 404)
+  - Errors: (404)
     ```
     {
       "error": "Video not found"
@@ -163,7 +185,7 @@ Below is database design toko-play application using MongoDB:
   curl -X GET /api/videos/:videoId
   ```
 - Response:
-  - Success: (code 200)
+  - Success: (200)
     ```
     {
       "_id": "videoId",
@@ -173,7 +195,7 @@ Below is database design toko-play application using MongoDB:
       "views": views
     }
     ```
-  - Errors: (code 404)
+  - Errors: (404)
     ```
     {
       "error": "Video not found"
@@ -189,13 +211,13 @@ Below is database design toko-play application using MongoDB:
   curl -X PUT /api/videos/:videoId
   ```
 - Response:
-  - Success: (code 200)
+  - Success: (200)
     ```
     {
       "message": "Video successfully to play"
     }
     ```
-  - Errors: (code 404)
+  - Errors: (404)
     ```
     {
       "error": "Video not found"
@@ -211,7 +233,7 @@ Below is database design toko-play application using MongoDB:
   curl -X GET /api/videos?title={title}
   ```
 - Response:
-  - Success: (code 200)
+  - Success: (200)
     ```
     {
       "videos": [
@@ -225,7 +247,7 @@ Below is database design toko-play application using MongoDB:
       ]
     }
     ```
-  - Errors: (code 404)
+  - Errors: (404)
     ```
     {
       "error": "Video not found"
@@ -241,7 +263,7 @@ Below is database design toko-play application using MongoDB:
   curl -X GET /api/products/:videoId
   ```
 - Response:
-  - Success: (code 200)
+  - Success: (200)
     ```
     {
       "products": [
@@ -255,7 +277,7 @@ Below is database design toko-play application using MongoDB:
       ]
     }
     ```
-  - Errors: (code 404)
+  - Errors: (404)
     ```
     {
       "error": "Product not found"
@@ -271,7 +293,7 @@ Below is database design toko-play application using MongoDB:
   curl -X GET /api/comments/:videoId
   ```
 - Response:
-  - Success: (code 200)
+  - Success: (200)
     ```
     {
       comments: [
@@ -284,7 +306,7 @@ Below is database design toko-play application using MongoDB:
       ]
     }
     ```
-  - Errors: (code 404)
+  - Errors: (404)
     ```
     {
       "error": "Comment not found"
@@ -313,13 +335,13 @@ Below is database design toko-play application using MongoDB:
   /api/comments
   ```
 - Response:
-  - Success: (code 201)
+  - Success: (201)
     ```
     {
       "message": "Comment created successfully"
     }
     ```
-  - Errors: (code 500)
+  - Errors: (500)
     ```
     {
       "error": "Internal server error"
