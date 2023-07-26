@@ -89,9 +89,9 @@ Below is database design toko-play application using MongoDB:
   {
     _id: ObjectId,
     video_id: String,
-    link_product: String,
     image: String,
     name: String,
+    link_product: String,
     price: String
   }
   ```
@@ -274,7 +274,7 @@ Below is database design toko-play application using MongoDB:
       "error": "Comment not found"
     }
     ```
-### 7. POST Comments by Id Video
+### 7. POST Comments in Video
 - Method: `POST`
 - URL Patterns: `/api/comments`
 - Body:
