@@ -1,96 +1,168 @@
 [{
     "video_id": "64c0027879fa15b5b29bd2b1",
-    "image": "https://images.unsplash.com/photo-1611427579146-5a418d32f0ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80",
-    "name": "TV Sony BRAVIA 65X95L",
-    "price": "6.000.000"
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/6/5/c361dda3-d4c5-48b2-83c8-d8bb06956c90.jpg",
+    "name": "Sony BRAVIA 65X95L",
+    "product_link": "https://tokopedia.link/WElE1jaHJBb",
+    "price": "36.600.000"
 },
 {
     "video_id": "64c0027879fa15b5b29bd2b1",
-    "image": "https://images.unsplash.com/photo-1615210230840-69c07c13b4d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-    "name": "TV TCL 55A50",
-    "price": "5.000.000"
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/6/3/97c13f3a-0794-4c04-a2fe-d593f709b8dc.jpg",
+    "name": "Sony BRAVIA 55A80L",
+    "product_link": "https://tokopedia.link/6QHDRKCIJBb",
+    "price": "26.000.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b1",
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/5/23/ce9e4b1e-020e-459e-bfae-f218ed44092e.jpg",
+    "name": "Sony BRAVIA 55X80L",
+    "product_link": "https://tokopedia.link/uywza9HIJBb",
+    "price": "16.000.000"
 },
 {
     "video_id": "64c0027879fa15b5b29bd2b2",
-    "image": "https://images.unsplash.com/photo-1611427579146-5a418d32f0ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80",
-    "name": "TV Sony BRAVIA 65X95L",
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/6/22/c0266054-734a-4a6f-af8a-602a60d332f6.jpg",
+    "name": "TCL 55A50",
+    "product_link": "https://tokopedia.link/GvsxusmHJBb",
+    "price": "6.500.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b2",
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/6/5/c361dda3-d4c5-48b2-83c8-d8bb06956c90.jpg",
+    "name": "Sony BRAVIA 65X95L",
+    "product_link": "https://tokopedia.link/WElE1jaHJBb",
+    "price": "36.600.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b2",
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/5/23/ce9e4b1e-020e-459e-bfae-f218ed44092e.jpg",
+    "name": "Sony BRAVIA 55X80L",
+    "product_link": "https://tokopedia.link/uywza9HIJBb",
+    "price": "16.000.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b3",
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/4/18/2eaacb86-b40e-4608-b274-e1e9022deba0.png",
+    "name": "Redmi Note 12",
+    "product_link": "https://tokopedia.link/THG074qHJBb",
+    "price": "2.600.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b3",
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/3/28/cde06f2a-ae06-4f0b-85e4-58add2713dc8.jpg",
+    "name": "Redmi Note 12 Pro",
+    "product_link": "https://tokopedia.link/80OCbOQIJBb",
+    "price": "4.600.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b3",
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/5/14/dbbd8c20-03b5-4488-bae9-f67b900ea967.png",
+    "name": "Samsung A54",
+    "product_link": "https://tokopedia.link/6qNeE1vHJBb",
     "price": "6.000.000"
 },
 {
-    "video_id": "64c0027879fa15b5b29bd2b2",
-    "image": "https://images.unsplash.com/photo-1615210230840-69c07c13b4d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-    "name": "TV TCL 55A50",
+    "video_id": "64c0027879fa15b5b29bd2b4",
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/5/14/dbbd8c20-03b5-4488-bae9-f67b900ea967.png",
+    "name": "Samsung A54",
+    "product_link": "https://tokopedia.link/6qNeE1vHJBb",
+    "price": "6.000.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b4",
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/5/14/18be8ac7-93f2-4fff-a6c8-a8206a95051a.png",
+    "name": "Samsung A34",
+    "product_link": "https://tokopedia.link/LIvY3yWIJBb",
     "price": "5.000.000"
 },
 {
-    "video_id": "64c0027879fa15b5b29bd2b3",
-    "image": "https://images.unsplash.com/photo-1683507557764-ee6625d7ec0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1031&q=80",
-    "name": "HP Redmi Note 12",
-    "price": "3.400.000"
-},
-{
-    "video_id": "64c0027879fa15b5b29bd2b3",
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80",
-    "name": "HP Samsung A54",
-    "price": "6.500.000"
-},
-{
     "video_id": "64c0027879fa15b5b29bd2b4",
-    "image": "https://images.unsplash.com/photo-1683507557764-ee6625d7ec0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1031&q=80",
-    "name": "HP Redmi Note 12",
-    "price": "3.400.000"
-},
-{
-    "video_id": "64c0027879fa15b5b29bd2b4",
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80",
-    "name": "HP Samsung A54",
-    "price": "6.500.000"
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/4/18/2eaacb86-b40e-4608-b274-e1e9022deba0.png",
+    "name": "Redmi Note 12",
+    "product_link": "https://tokopedia.link/THG074qHJBb",
+    "price": "2.600.000"
 },
 {
     "video_id": "64c0027879fa15b5b29bd2b5",
-    "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=465&q=80",
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/5/23/23d8200c-9b0e-4a00-8337-3ab0e89281a5.jpg",
     "name": "Samsung Galaxy S23 Ultra",
-    "price": "15.000.000"
+    "product_link": "https://tokopedia.link/DA1eKFAHJBb",
+    "price": "20.000.000"
 },
 {
     "video_id": "64c0027879fa15b5b29bd2b5",
-    "image": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=367&q=80",
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/11/8/963b2d5a-9dad-440a-8f9d-1ce81997bbd4.jpg",
+    "name": "Iphone 14 Pro Max",
+    "product_link": "https://tokopedia.link/7P1ZrwgJJBb",
+    "price": "20.000.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b5",
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/6/28/b6398a54-c52d-4f0c-8dde-75501272bf80.png",
     "name": "Sony Experia 1 Mark V",
-    "price": "14.500.000"
+    "product_link": "https://tokopedia.link/f47JhLVHJBb",
+    "price": "6.250.000"
 },
 {
     "video_id": "64c0027879fa15b5b29bd2b6",
-    "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=465&q=80",
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/6/28/b6398a54-c52d-4f0c-8dde-75501272bf80.png",
+    "name": "Sony Experia 1 Mark V",
+    "product_link": "https://tokopedia.link/f47JhLVHJBb",
+    "price": "6.250.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b6",
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/5/23/23d8200c-9b0e-4a00-8337-3ab0e89281a5.jpg",
     "name": "Samsung Galaxy S23 Ultra",
-    "price": "15.000.000"
+    "product_link": "https://tokopedia.link/DA1eKFAHJBb",
+    "price": "20.000.000"
 },
 {
     "video_id": "64c0027879fa15b5b29bd2b6",
-    "image": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=367&q=80",
-    "name": "Sony Experia 1 Mark V",
-    "price": "14.500.000"
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/3/28/cde06f2a-ae06-4f0b-85e4-58add2713dc8.jpg",
+    "name": "Redmi Note 12 Pro",
+    "product_link": "https://tokopedia.link/80OCbOQIJBb",
+    "price": "4.600.000"
 },
 {
     "video_id" : "64c0027879fa15b5b29bd2b7",
-    "image" : "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=820&q=80",
-    "name" : "Laptop MSI Cyborg Gaming RTX 4080",
-    "price" : "26.000.000"
+    "image" : "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/3/3/c94502c7-0d39-4111-82e4-8f6a89167e1e.png",
+    "name" : "MSI Cyborg Gaming RTX 4060",
+    "product_link": "https://tokopedia.link/A3I78CLHJBb",
+    "price" : "16.000.000"
+},
+{
+    "video_id" : "64c0027879fa15b5b29bd2b7",
+    "image" : "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/7/5/19ab9cbe-21ca-42a8-9feb-2589570f78ba.jpg",
+    "name" : "MSI Modern 14 9S7-14D224-694",
+    "product_link": "https://tokopedia.link/R9diDhEJJBb",
+    "price" : "12.000.000"
 },
 {
     "video_id": "64c0027879fa15b5b29bd2b7",
-    "image": "https://images.unsplash.com/photo-1623126908029-58cb08a2b272?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-    "name": "Tablet OPPO Pad Air",
-    "price": "3.200.000"
-},
-{
-    "video_id" : "64c0027879fa15b5b29bd2b8",
-    "image" : "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=820&q=80",
-    "name" : "Laptop MSI Cyborg Gaming RTX 4080",
-    "price" : "26.000.000"
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/6/14/bb15d5c2-c9eb-4079-b647-a8f2d518f674.jpg",
+    "name": "OPPO Pad Air",
+    "product_link": "https://tokopedia.link/VJftff6HJBb",
+    "price": "3.600.000"
 },
 {
     "video_id": "64c0027879fa15b5b29bd2b8",
-    "image": "https://images.unsplash.com/photo-1623126908029-58cb08a2b272?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-    "name": "Tablet OPPO Pad Air",
-    "price": "3.200.000"
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/6/14/bb15d5c2-c9eb-4079-b647-a8f2d518f674.jpg",
+    "name": "OPPO Pad Air",
+    "product_link": "https://tokopedia.link/VJftff6HJBb",
+    "price": "3.600.000"
+},
+{
+    "video_id": "64c0027879fa15b5b29bd2b8",
+    "image": "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/6/8/a5597e87-7785-4597-8c6a-1b8bc4dd3ebc.jpg",
+    "name": "Samsung Tab S6 Lite",
+    "product_link": "https://tokopedia.link/aH5xeFVJJBb",
+    "price": "6.000.000"
+},
+{
+    "video_id" : "64c0027879fa15b5b29bd2b8",
+    "image" : "https://images.tokopedia.net/img/cache/900/VqbcmM/2023/3/3/c94502c7-0d39-4111-82e4-8f6a89167e1e.png",
+    "name" : "MSI Cyborg Gaming RTX 4080",
+    "product_link": "https://tokopedia.link/A3I78CLHJBb",
+    "price" : "16.000.000"
 }] 

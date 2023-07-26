@@ -5,6 +5,10 @@ const productSchema = new mongoose.Schema({
         required: true,
         type: String
     },
+    link_product: { 
+        required: true,
+        type: String
+    },
     image: { 
         required: true,
         type: String

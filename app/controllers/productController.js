@@ -4,7 +4,7 @@ async function getAllProduct(req, res){
     const { videoId } = req.params;
 
     try {
-        const products = await Product.find({ video_id: videoId }, '_id image name price');
+        const products = await Product.find({ video_id: videoId }, '_id product_link image name price');
 
         if(!products){
             res.status(404).json({ error: 'Product not found' });
