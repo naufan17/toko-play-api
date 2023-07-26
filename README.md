@@ -78,9 +78,9 @@ Below is database design toko-play application using MongoDB:
   ```
   {
     _id: ObjectId,
+    title: String,
     url_video: String,
     thumbnail: String,
-    title: String,
     views: Number
   }
   ```
@@ -106,4 +106,207 @@ Below is database design toko-play application using MongoDB:
   }
   ```
 
-## API Documentary and Usage (soon)
+## API Documentary and Usage
+### 1. GET all Videos
+- Method: `GET`
+- URL Patterns: `/api/videos`
+- Body: `none`
+- Headers: `Content-Type: application/json`
+- Usage:
+  ```
+  curl -X GET /api/videos
+  ```
+- Response:
+  - Success: (code 200)
+    ```
+    {
+      "videos": [
+        {
+          "_id": "videoId",
+          "title": "title",
+          "url_video": "url_video",
+          "thumbnail": "thumbnail",
+          "views": views
+        }
+      ]
+    }
+    ```
+  - Errors: (code 404)
+    ```
+    {
+      "error": "Video not found"
+    }
+    ```
+### 2. GET Videos by Id
+- Method: `GET`
+- URL Patterns: `/api/videos/:videoId`
+- Body: `none`
+- Headers: `Content-Type: application/json`
+- Usage:
+  ```
+  curl -X GET /api/videos/:videoId
+  ```
+- Response:
+  - Success: (code 200)
+    ```
+    {
+      "_id": "videoId",
+      "title": "title",
+      "url_video": "url_video",
+      "thumbnail": "thumbnail",
+      "views": views
+    }
+    ```
+  - Errors: (code 404)
+    ```
+    {
+      "error": "Video not found"
+    }
+    ```
+### 3. Play Video
+- Method: `PUT`
+- URL Patterns: `/api/videos/:videoId`
+- Body: `none`
+- Headers: `Content-Type: application/json`
+- Usage:
+  ```
+  curl -X PUT /api/videos/:videoId
+  ```
+- Response:
+  - Success: (code 200)
+    ```
+    {
+      "message": "Video successfully to play"
+    }
+    ```
+  - Errors: (code 404)
+    ```
+    {
+      "error": "Video not found"
+    }
+    ```
+### 4. GET Videos search by title
+- Method: `GET`
+- URL Patterns: `/api/videos?title={title}`
+- Body: `none`
+- Headers: `Content-Type: application/json`
+- Usage:
+  ```
+  curl -X GET /api/videos?title={title}
+  ```
+- Response:
+  - Success: (code 200)
+    ```
+    {
+      "videos": [
+        {
+          "_id": "videoId",
+          "title": "title",
+          "url_video": "url_video",
+          "thumbnail": "thumbnail",
+          "views": views
+        }
+      ]
+    }
+    ```
+  - Errors: (code 404)
+    ```
+    {
+      "error": "Video not found"
+    }
+    ```
+### 5. GET Products by Id Video
+- Method: `GET`
+- URL Patterns: `/api/products/:videoId`
+- Body: `none`
+- Headers: `Content-Type: application/json`
+- Usage:
+  ```
+  curl -X GET /api/products/:videoId
+  ```
+- Response:
+  - Success: (code 200)
+    ```
+    {
+      "products": [
+        {
+          "_id": "productId",
+          "image": "image",
+          "name": "name",
+          "product_link": "product_link",
+          "price" : "price"
+        }
+      ]
+    }
+    ```
+  - Errors: (code 404)
+    ```
+    {
+      "error": "Product not found"
+    }
+    ```
+### 6. GET Comments by Id Video
+- Method: `GET`
+- URL Patterns: `/api/comments/:videoId`
+- Body: `none`
+- Headers: `Content-Type: application/json`
+- Usage:
+  ```
+  curl -X GET /api/comments/:videoId
+  ```
+- Response:
+  - Success: (code 200)
+    ```
+    {
+      comments: [
+        {
+          "_id": "commentId",
+          "username": "username:,
+          "comment": "comment,
+          "created_at: created_at
+        }
+      ]
+    }
+    ```
+  - Errors: (code 404)
+    ```
+    {
+      "error": "Comment not found"
+    }
+    ```
+### 7. POST Comments by Id Video
+- Method: `POST`
+- URL Patterns: `/api/comments`
+- Body:
+  ```
+  {
+    video_id: ObjectId,
+    username: String,
+    comment: String
+  }
+  ```
+- Headers: `Content-Type: application/json`
+- Usage:
+  ```
+  curl -X POST \
+  -d '{
+    "video_id": "videoId",
+    "username": "username",
+    "comment": "comment"
+  }'\
+  /api/comments
+  ```
+- Response:
+  - Success: (code 201)
+    ```
+    {
+      "message": "Comment created successfully"
+    }
+    ```
+  - Errors: (code 500)
+    ```
+    {
+      "error": "Internal server error"
+    }
+    ```
+    
