@@ -7,13 +7,13 @@ async function getAllComment(req, res){
         const comments = await Comment.find({ video_id: videoId }, '_id username comment created_at');
 
         if(!comments) {
-            res.status(404).json({ error: 'Comment not found' });
+            res.status(404).header("Access-Control-Allow-Origin", "*").json({ error: 'Comment not found' });
         } else {
-            res.status(200).json({ comments: comments });
+            res.status(200).header("Access-Control-Allow-Origin", "*").json({ comments: comments });
         }
     } catch (err) {
         console.error('Error fetching comment:', err);
-        res.status(500).json({ error: 'Internal server error' });
+        res.status(500).header("Access-Control-Allow-Origin", "*").json({ error: 'Internal server error' });
     }
 }
 
@@ -28,10 +28,10 @@ async function createComment(req, res){
     try {
         const newComment = new Comment(comment)
         const saveComment = await newComment.save();
-        res.status(201).json({ message: 'Comment created successfully' });
+        res.status(201).header("Access-Control-Allow-Origin", "*").json({ message: 'Comment created successfully' });
     } catch (err) {
         console.error('Error inserting comment:', err);
-        res.status(500).json({ error: 'Internal server error' });
+        res.status(500).header("Access-Control-Allow-Origin", "*").json({ error: 'Internal server error' });
     }
 }
 

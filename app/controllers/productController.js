@@ -7,13 +7,13 @@ async function getAllProduct(req, res){
         const products = await Product.find({ video_id: videoId }, '_id product_link image name price');
 
         if(!products){
-            res.status(404).json({ error: 'Product not found' });
+            res.status(404).header("Access-Control-Allow-Origin", "*").json({ error: 'Product not found' });
         } else {
-            res.status(200).json({ products: products });
+            res.status(200).header("Access-Control-Allow-Origin", "*").json({ products: products });
         }
     } catch (err) {
         console.error('Error fetching product:', err);
-        res.status(500).json({ error: 'Internal server error' });
+        res.status(500).header("Access-Control-Allow-Origin", "*").json({ error: 'Internal server error' });
     }
 }
 
