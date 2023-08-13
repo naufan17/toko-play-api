@@ -8,21 +8,21 @@ async function getAllVideo(req, res) {
             const videos = await Video.find({ title: { $regex: reqTitle, $options: 'i' } });
             
             if(!videos) {
-                return res.status(404).header("Access-Control-Allow-Origin", "*").json({ error: 'Videos not found' })
+                return res.status(404).json({ error: 'Videos not found' })
             } else {
-                res.status(200).header("Access-Control-Allow-Origin", "*").json({ videos: videos });
+                res.status(200).json({ videos: videos });
             }
         } catch (err) {
             console.error('Error fetching videos:', err);
-            res.status(500).header("Access-Control-Allow-Origin", "*").json({ error: 'Internal server error' });
+            res.status(500).json({ error: 'Internal server error' });
         }
     } else {
         try {
             const videos = await Video.find();
-            res.status(200).header("Access-Control-Allow-Origin", "*").json({ videos: videos });
+            res.status(200).json({ videos: videos });
         } catch (err) {
             console.error('Error fetching videos:', err);
-            res.status(500).header("Access-Control-Allow-Origin", "*").json({ error: 'Internal server error' });
+            res.status(500).json({ error: 'Internal server error' });
         }    
     }
 }
@@ -34,13 +34,13 @@ async function getOneVideo(req, res){
         const video = await Video.findById(videoId);
         
         if(!video) {
-            return res.status(404).header("Access-Control-Allow-Origin", "*").json({ error: 'Videos not found' })
+            return res.status(404).json({ error: 'Videos not found' })
         } else {
-            res.status(200).header("Access-Control-Allow-Origin", "*").json(video);
+            res.status(200).json(video);
         }
     } catch (err) {
         console.error('Error fetching videos:', err);
-        res.status(500).header("Access-Control-Allow-Origin", "*").json({ error: 'Internal server error' });
+        res.status(500).json({ error: 'Internal server error' });
     }
 }
 
@@ -51,11 +51,11 @@ async function playVideo(req, res){
         const video = await Video.findById(videoId);
 
         if(!video){
-            res.status(404).header("Access-Control-Allow-Origin", "*").json({ error: "Video not found"});
+            res.status(404).json({ error: "Video not found"});
         } else {
             video.views++;
             const updatedVideo = await video.save();
-            res.status(200).header("Access-Control-Allow-Origin", "*").json({ message: 'Video successfully to play' });
+            res.status(200).json({ message: 'Video successfully to play' });
         }
     } catch (err) {
         console.error('Error play video:', err);
