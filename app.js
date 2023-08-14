@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const database = require('./app/config/db');
 const videoRoutes = require('./app/routes/videoRoutes');
 const productRoutes = require('./app/routes/productRoutes');
 const commmentRoutes = require('./app/routes/commentRoutes');
