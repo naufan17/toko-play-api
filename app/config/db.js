@@ -1,29 +1,19 @@
 require('dotenv').config();
 
 const mongoose = require('mongoose');
-const URL = process.env.URL_DATABASE;
+const uri = process.env.URL_DATABASE_ATLAS;
 
-mongoose.connect(URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
-
-const database = mongoose.connection;
-
-database.on('error', (error) => {
-    console.error('MongoDB connection error:', error);
-});
-  
-database.once('open', () => {
-    console.log('Connected to MongoDB database.');
-});
-  
-database.on('disconnected', () => {
-    console.log('Disconnected from MongoDB database.');
-});
-  
-database.on('reconnected', () => {
-    console.log('Reconnected to MongoDB database.');
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
-module.exports = { database };
+const db = mongoose.connection;
+
+db.on('error', () => {
+    console.error.bind(console, 'Connection error:');
+});
+
+db.once('open', () => {
+  console.log('Connected to MongoDB Atlas');
+});
