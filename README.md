@@ -1,5 +1,5 @@
 # toko-play-api
-HTTP Rest API backend with Node js and Express js. Mid Term Project Gigih Generation 3.0
+HTTP Rest API backend Toko-Play Application with Node js and Express js.
 
 How to setup local code program:
 - Clone this repository
@@ -10,7 +10,7 @@ npm install
 ```
 - Run this command to start the server:
 ```
-npm run dev
+npm start
 ```
 
 
