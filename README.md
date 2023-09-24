@@ -25,6 +25,7 @@ use toko-play
 db.createCollection('videos')
 db.createCollection('products')
 db.createCollection('comments')
+db.createCollection('users')
 ```
 - Import each collections with data json in folder database collection
 
@@ -63,14 +64,19 @@ toko-play-api/
   |    |    |---commentControllers.js
   |    |    |---productController.js
   |    |    |---videoController.js
+  |    |    |---userController.js
+  |    |---middleware/
+  |    |    |---authentication.js
   |    |---models/
   |    |    |---Comment.js
   |    |    |---Product.js
   |    |    |---Video.js
+  |    |    |---User.js
   |    |---routes/
   |    |    |---commentRoutes.js
   |    |    |---productRoutes.js
   |    |    |---videoRoutes.js
+  |    |    |---userRoutes.js
   |---database/
   |    |---collections/
   |    |    |---comments.json
@@ -89,6 +95,7 @@ Explanation of the folder structure:
 - config/: This folder holds configuration files for the application, such as database connection setup or environment variables.
 - controllers/: This folder contains controller modules that handle business logic for different routes. Controllers interact with models and return responses to the client.
 - models/: This folder holds the Mongoose models that define the structure of your MongoDB collections and interact with the database.
+- middleware/: This folder protect routes from incoming request with authentication using JWT token.
 - routes/: This folder includes route definition modules. Each route module handles specific endpoints and connects them to corresponding controller functions.
 - database/: This folder contains data sample of collection in mongodb database. Data in the form of json can be imported into collections.
 - node_modules/: This folder contains the installed Node.js packages (dependencies) from npm.
@@ -128,9 +135,26 @@ Below is collection database application in MongoDB:
     comment: String,
     created_at: Date
   }
+- User Collections
+  ```
+  {
+    _id: ObjectId,
+    username: String,
+    email: String,
+    password: String
+  }
   ```
 Below is database design toko-play application using MongoDB:
   ```
+                                           __________________
+                                          |      Users       | 
+                                          |__________________|
+                                          | _id: ObjectId    |
+                                          | username: String |
+                                          | email: String    |
+                                          | password: String |
+                                          |__________________|
+
    ______________________                 ____________________                 __________________
   |       Products       |               |       Videos       |               |     Comments     |
   |______________________|               |____________________|               |__________________|
@@ -201,29 +225,7 @@ Below is database design toko-play application using MongoDB:
       "error": "Video not found"
     }
     ```
-### 3. Play Video
-- Method: `PUT`
-- URL Patterns: `/api/videos/:videoId`
-- Body: `none`
-- Headers: `Content-Type: application/json`
-- Usage:
-  ```
-  curl -X PUT /api/videos/:videoId
-  ```
-- Response:
-  - Success: (200)
-    ```
-    {
-      "message": "Video successfully to play"
-    }
-    ```
-  - Errors: (404)
-    ```
-    {
-      "error": "Video not found"
-    }
-    ```
-### 4. GET Videos search by title
+### 3. GET Videos search by title
 - Method: `GET`
 - URL Patterns: `/api/videos?title={title}`
 - Body: `none`
@@ -253,7 +255,7 @@ Below is database design toko-play application using MongoDB:
       "error": "Video not found"
     }
     ```
-### 5. GET Products by Id Video
+### 4. GET Products by Id Video
 - Method: `GET`
 - URL Patterns: `/api/products/:videoId`
 - Body: `none`
@@ -283,7 +285,7 @@ Below is database design toko-play application using MongoDB:
       "error": "Product not found"
     }
     ```
-### 6. GET Comments by Id Video
+### 5. GET Comments by Id Video
 - Method: `GET`
 - URL Patterns: `/api/comments/:videoId`
 - Body: `none`
@@ -312,7 +314,7 @@ Below is database design toko-play application using MongoDB:
       "error": "Comment not found"
     }
     ```
-### 7. POST Comments in Video
+### 6. POST Comments in Video
 - Method: `POST`
 - URL Patterns: `/api/comments`
 - Body:
