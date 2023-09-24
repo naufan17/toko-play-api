@@ -44,27 +44,8 @@ async function getOneVideo(req, res){
     }
 }
 
-async function playVideo(req, res){
-    const { videoId } = req.params;
-
-    try {
-        const video = await Video.findById(videoId);
-
-        if(!video){
-            res.status(404).json({ error: "Video not found"});
-        } else {
-            video.views++;
-            const updatedVideo = await video.save();
-            res.status(200).json({ message: 'Video successfully to play' });
-        }
-    } catch (err) {
-        console.error('Error play video:', err);
-        res.status(500).header("Access-Control-Allow-Origin", "*").json({ error: 'Internal server error' });
-    }
-}
-
 // Optional
 async function createVideo(req, res){}
 async function deleteVideo(req, res){}
 
-module.exports = { getAllVideo, getOneVideo, playVideo, createVideo, deleteVideo };
+module.exports = { getAllVideo, getOneVideo, createVideo, deleteVideo };

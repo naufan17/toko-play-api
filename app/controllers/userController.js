@@ -1,5 +1,9 @@
+require('dotenv').config();
+
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const User = require('../models/User');
+const accessToken = process.env.SECRET_TOKEN;
 
 async function registerUser(req, res){
     const reqUser = req.body;
@@ -14,7 +18,11 @@ async function registerUser(req, res){
     try {
         const newUser = new User(user)
         const saveUser = await newUser.save();
-        res.status(201).json({ message: 'User register successfully' });
+
+        // Generate JWT Token
+        const token = jwt.sign({ username : user.username }, accessToken, {expiresIn: '24h'});
+
+        res.status(200).json({ token: token });
     } catch (err) {
         console.error('Error register user:', err);
         res.status(500).json({ error: 'Internal server error' });
@@ -29,14 +37,17 @@ async function loginUser(req, res){
     }
 
     try {
-        const users = await User.find({ email: user.email }, 'email password');
+        const users = await User.find({ email: user.email }, 'username email password');
 
         const isPasswordValid = await bcrypt.compare(user.password, users[0].password);
 
         if(!isPasswordValid) {
             res.status(404).json({ error: 'User not found' });
         } else {
-            res.status(200).json({ message: 'User login successfully'});
+            // Generate JWT Token
+            const token = jwt.sign({ username : users[0].username }, accessToken, {expiresIn: '24h'});
+
+            res.status(200).json({ token: token });
         }
     } catch (err) {
         console.error('Error login user:', err);
@@ -44,8 +55,17 @@ async function loginUser(req, res){
     }
 }
 
-async function logoutUser(req, res){
-    res.status(200).json({ messsage: 'User logout successful' });
+async function profileUser(req, res){
+    const reqUsername = req.user;
+
+    try {
+        const users = await User.find({ username: reqUsername.username }, 'username email');
+
+        res.status(200).json({ user: users });
+    } catch (err) {
+        console.error('Error login user:', err);
+        res.status(500).json({ error: 'Internal server error' });
+    }
 }
 
-module.exports = { registerUser, loginUser, logoutUser }
+module.exports = { registerUser, profileUser, loginUser }

@@ -1,15 +1,15 @@
 const express = require('express');
 const videoController = require('../controllers/videoController');
+const authentication = require('../middleware/authentication');
 
 const router = express.Router();
 
 router.get('/videos', videoController.getAllVideo)
 router.get('/videos/:videoId', videoController.getOneVideo)
-router.put('/videos/:videoId/play', videoController.playVideo)
 
 // Optional
-router.post('/videos', videoController.createVideo)
-router.delete('/videos/:videoId', videoController.deleteVideo)
+router.post('/videos', authentication, videoController.createVideo)
+router.delete('/videos/:videoId', authentication, videoController.deleteVideo)
 
   
 module.exports = router;
