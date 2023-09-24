@@ -4,6 +4,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const database = require('./app/config/db');
+const userRoutes = require('./app/routes/userRoutes');
 const videoRoutes = require('./app/routes/videoRoutes');
 const productRoutes = require('./app/routes/productRoutes');
 const commmentRoutes = require('./app/routes/commentRoutes');
@@ -15,6 +16,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use('/api', cors(), userRoutes);
 app.use('/api', cors(), videoRoutes);
 app.use('/api', cors(), productRoutes);
 app.use('/api', cors(), commmentRoutes);
