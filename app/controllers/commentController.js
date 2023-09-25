@@ -2,15 +2,37 @@ const Comment = require('../models/Comment');
 
 async function getAllComment(req, res){
     const { videoId } = req.params;
+    const reqUsername = req.user;
+    let usernameToPrioritize = "";
 
     try {
         const comments = await Comment.find({ video_id: videoId }, '_id username comment created_at');
 
-        if(!comments) {
-            res.status(404).json({ error: 'Comment not found' });
+        if(reqUsername) {
+            usernameToPrioritize = reqUsername.username;
+            const sortedComments = comments.sort((a, b) => {
+                if (a.username === usernameToPrioritize && b.username !== usernameToPrioritize) {
+                  return -1;
+                } else if (a.username !== usernameToPrioritize && b.username === usernameToPrioritize) {
+                  return 1;
+                } else {
+                  return 0;
+                }
+            });
+    
+            if(!sortedComments) {
+                res.status(404).json({ error: 'Comment not found' });
+            } else {
+                res.status(200).json({ comments: sortedComments });
+            }
         } else {
-            res.status(200).json({ comments: comments });
+            if(!comments) {
+                res.status(404).json({ error: 'Comment not found' });
+            } else {
+                res.status(200).json({ comments: comments });
+            }
         }
+
     } catch (err) {
         console.error('Error fetching comment:', err);
         res.status(500).json({ error: 'Internal server error' });
@@ -19,9 +41,18 @@ async function getAllComment(req, res){
 
 async function createComment(req, res){
     const reqComment = req.body;
+    const reqUsername = req.user;
+    let username = "";
+
+    if(!reqUsername) {
+        username = "Anonymous";
+    } else {
+        username = reqUsername.username;
+    }
+
     const comment = {
         video_id: reqComment.video_id,
-        username: reqComment.username,
+        username: username,
         comment: reqComment.comment
     }
 
@@ -35,8 +66,22 @@ async function createComment(req, res){
     }
 }
 
-// Optional
 async function deleteComment(req, res){
+    const { commentId } = req.params;
+
+    try {
+        const comments = await Comment.findByIdAndRemove(commentId);
+
+        if(!comments) {
+            res.status(404).json({ error: 'Comment not found' });
+        } else {
+            res.status(201).json({ message: 'Comment deleted successfully' });
+        }
+    } catch (err) {
+        console.error('Error fetching comment:', err);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+
 }
 
 module.exports = { getAllComment, createComment, deleteComment}
